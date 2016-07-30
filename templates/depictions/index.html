@@ -103,7 +103,7 @@
 					return;
 				}
 
-		  		$.getJSON("packages/" + dPackage + ".json", function(data) {
+		  		$.getJSON("packages/" + dPackage + "/" + dPackage + ".json", function(data) {
 					document.title = data.name + " by " + data.author;
 					$(".package-name").text(data.name);
 					$(".package-desc").text(data.description);
@@ -129,7 +129,7 @@
 						if (count % 2 === 0) {
 							$(".screenshots").append("<div class=\"subshots col-xs-12\"></div>");
 						}
-						$(".screenshots .subshots:last-child").append("<div class=\"col-xs-6\"><img class=\"img-responsive\" src=\"screenshots/" + dPackage + "/" + screenshot + "\" title=\"" + screenshots[screenshot] + "\"><p>" + screenshots[screenshot] + "</p><br></div>");
+						$(".screenshots .subshots:last-child").append("<div class=\"col-xs-6\"><img class=\"img-responsive\" src=\"packages/" + dPackage + "/" + "images" + "/" + screenshot + "\" title=\"" + screenshots[screenshot] + "\"><p>" + screenshots[screenshot] + "</p><br></div>");
 						count += 1;
 					}
 
